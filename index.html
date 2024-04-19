@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=H1, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="redactr.js" defer></script> 
+    <title>REDACTR</title>
+</head>
+<body>
+    <h1>REDACTR</h1>
+    <p>Scramble some word. Will you?</p>
+   
+        <form action="get" id="redactForm">
+            <section>
+                <label for="content">Enter your content:</label>
+                <input id="content" type="text" required>     
+            </section>
+            <section>
+                 <label for="redacted">Words to be redacted (separated by spaces):</label>
+                 <input id="redacted" type="text" required>
+            </section>
+                <label for="redact">Choose a replacement:</label>    
+            <select id="redact">
+                <option value="*">Asterisk</option>
+                <option value="-">Dashes</option>
+                <option value="?">Question mark</option>
+                <option value="_">Underscores</option>
+                <option value="Redacted">Custom word eg. Redacted</option>
+            </select> 
+            <button type="button" class="btn" onclick="redactContent()" class="btn">Redact now</button>
+            <button  type="button" class="btn1" onclick="resetForm()" class="btn1">Reset Form</button>
+        </form>
+        <div id="redactedContent"></div>
+        <div id="stats"></div>
+</body>
+</html>
